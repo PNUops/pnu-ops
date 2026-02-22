@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
+/* Primitive palette from Figma */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* brand */
+  --primitive-brand-50: #e6f0f8;
+  --primitive-brand-100: #b3d1ea;
+  --primitive-brand-200: #80b3dc;
+  --primitive-brand-300: #4d94ce;
+  --primitive-brand-400: #267bc3;
+  --primitive-brand-500: #005baa;
+  --primitive-brand-600: #004f94;
+  --primitive-brand-700: #00447e;
+  --primitive-brand-800: #003867;
+  --primitive-brand-900: #002c51;
+
+  /* neutral */
+  --primitive-neutral-0: #ffffff;
+  --primitive-neutral-50: #f7f9fb;
+  --primitive-neutral-100: #eef2f6;
+  --primitive-neutral-200: #d6dee6;
+  --primitive-neutral-300: #b8c4d1;
+  --primitive-neutral-400: #94a3b3;
+  --primitive-neutral-500: #6b7a8a;
+  --primitive-neutral-600: #4b5563;
+  --primitive-neutral-700: #374151;
+  --primitive-neutral-800: #1f2937;
+  --primitive-neutral-900: #00120b;
+
+  /* status */
+  --primitive-green-500: #31e981;
+  --primitive-orange-500: #e4572e;
+  --primitive-blue-400: #6daedb;
 }
 
+/* Tailwind v4 theme tokens */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* base text / background (semantic) */
+  --color-bg-default: var(--primitive-neutral-0);
+  --color-bg-subtle: var(--primitive-neutral-50);
+  --color-bg-elevated: var(--primitive-neutral-0);
+  --color-bg-brand: var(--primitive-brand-50);
+
+  --color-text-primary: var(--primitive-neutral-900);
+  --color-text-secondary: var(--primitive-neutral-600);
+  --color-text-tertiary: var(--primitive-neutral-400);
+  --color-text-inverse: var(--primitive-neutral-0);
+  --color-text-brand: var(--primitive-brand-500);
+
+  --color-border-default: var(--primitive-neutral-200);
+  --color-border-subtle: var(--primitive-neutral-100);
+  --color-border-strong: var(--primitive-neutral-400);
+  --color-border-focus: var(--primitive-brand-500);
+
+  --color-brand-default: var(--primitive-brand-500);
+  --color-brand-hover: var(--primitive-brand-600);
+  --color-brand-active: var(--primitive-brand-700);
+  --color-brand-subtle: var(--primitive-brand-50);
+
+  --color-status-success: var(--primitive-green-500);
+  --color-status-error: var(--primitive-orange-500);
+  --color-status-info: var(--primitive-blue-400);
+
+  /* keep backwards-compatible tokens for template classes */
+  --color-background: var(--color-bg-default);
+  --color-foreground: var(--color-text-primary);
+
+  /* fonts from next/font (layout.tsx) */
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* simple dark-mode mapping using same primitives */
+    --color-bg-default: var(--primitive-neutral-900);
+    --color-bg-subtle: var(--primitive-neutral-800);
+    --color-bg-elevated: var(--primitive-neutral-800);
+
+    --color-text-primary: var(--primitive-neutral-0);
+    --color-text-secondary: var(--primitive-neutral-300);
+    --color-text-tertiary: var(--primitive-neutral-500);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg-default);
+  color: var(--color-text-primary);
+  font-family:
+    var(--font-sans),
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family:
+    var(--font-display),
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
