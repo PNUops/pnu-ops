@@ -18,7 +18,7 @@ export default function TechSection() {
       id="projects"
       label="Tech Stack"
       title="How we build and operate."
-      description="역할별로 다양한 기술 스택을 사용해 실제 프로덕트를 설계·개발·운영합니다."
+      description="역할별로 다양한 기술 스택을 사용해 설계·개발·운영해요."
     >
       <div className="grid gap-8 md:grid-cols-2">
         <div className="border-border-subtle bg-bg-elevated/90 relative overflow-hidden rounded-3xl border p-6 shadow-[0_18px_40px_rgba(15,23,42,0.16)]">

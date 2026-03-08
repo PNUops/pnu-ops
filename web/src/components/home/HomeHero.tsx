@@ -31,31 +31,16 @@ export default function HomeHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <div className="border-border-subtle bg-bg-elevated/80 text-text-secondary inline-flex shrink-0 items-center rounded-full border px-3 py-1 text-[11px] font-medium tracking-[0.18em] text-nowrap uppercase backdrop-blur">
-            <span>Pusan National University · Computing & Developers Club</span>
-          </div>
-
-          <div className="space-y-3">
+          <div className="flex flex-col items-start gap-3 space-y-3">
             <h1 className="text-text-primary font-mono text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
               <span className="text-brand-default">$</span> <span>{typed}</span>
               <span className="bg-brand-default ml-1 inline-block h-7 w-0.5 animate-pulse align-middle" />
             </h1>
-            <p className="text-text-secondary max-w-xl text-sm sm:text-base">
-              PNUops는 실제로 운영되는 웹 서비스, 내부 도구, 시스템을 설계하고
-              개발하고 운영하는 부산대학교 개발 동아리입니다.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap gap-2 text-[11px] font-medium tracking-[0.18em] uppercase">
-            <span className="bg-brand-default/10 text-brand-default rounded-full px-3 py-1">
-              Real Products
-            </span>
-            <span className="bg-bg-subtle text-text-secondary rounded-full px-3 py-1">
-              Web · Infra · Tools
-            </span>
-            <span className="bg-bg-subtle text-text-secondary rounded-full px-3 py-1">
-              Student Builders
-            </span>
+            <div className="border-border-subtle bg-bg-elevated/80 text-text-secondary inline-flex shrink-0 items-center rounded-full border px-3 py-1 text-[11px] font-medium tracking-[0.18em] text-nowrap uppercase backdrop-blur">
+              <span>
+                Pusan National University · Computing & Developers Club
+              </span>
+            </div>
           </div>
         </motion.div>
 
