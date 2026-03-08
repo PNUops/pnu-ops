@@ -6,22 +6,22 @@ import SectionLayout from "@/components/common/SectionLayout";
 const items = [
   {
     title: "Product Development",
-    body: "웹 서비스를 설계하고, 학기마다 실제로 배포합니다.",
+    body: "We design web services and ship them every semester.",
     tags: ["Web", "App", "Product"],
   },
   {
     title: "Internal Tools & Ops",
-    body: "동아리 운영을 위한 대시보드를 직접 만듭니다.",
+    body: "We build dashboards and tools to run the club itself.",
     tags: ["Dashboards", "Automation"],
   },
   {
     title: "Campus Tech Services",
-    body: "캠퍼스에서 실제로 사용되는 서비스를 기획하고 운영합니다.",
+    body: "We plan and operate services that are actually used on campus.",
     tags: ["Campus", "Service", "System"],
   },
   {
     title: "Learning & Sharing",
-    body: "스터디·세미나·코드리뷰를 통해 함께 성장합니다.",
+    body: "We grow together through studies, seminars, and code reviews.",
     tags: ["Study", "Seminar", "Review"],
   },
 ];
@@ -32,7 +32,7 @@ export default function WhatWeDoSection() {
       id="what-we-do"
       label="What we do"
       title="We build and operate software systems."
-      description="모두가 열정을 가지고, 실제 사용자와 운영을 전제로 한 시스템을 다뤄요."
+      description="Everyone works with real users and real operations in mind."
     >
       <div className="grid gap-6 md:grid-cols-2">
         {items.map((item) => (

@@ -5,16 +5,16 @@ import SectionLayout from "@/components/common/SectionLayout";
 
 const steps = [
   {
-    title: "1. 지원서 작성",
-    body: "간단한 자기소개와 함께, 관심 있는 트랙과 이유를 적습니다.",
+    title: "1. Application form",
+    body: "Tell us briefly who you are and which track you’re interested in.",
   },
   {
-    title: "2. 과제 또는 포트폴리오",
-    body: "실력을 보여줄 수 있는 작은 과제 또는 기존 작업물을 제출합니다.",
+    title: "2. Assignment or portfolio",
+    body: "Share a small assignment or portfolio that best shows your skills.",
   },
   {
-    title: "3. 인터뷰",
-    body: "함께 일할 수 있는지, 어떤 경험을 쌓고 싶은지 대화합니다.",
+    title: "3. Interview",
+    body: "We talk about how we might work together and what you want to learn.",
   },
 ];
 
@@ -24,7 +24,7 @@ export default function JoinSection() {
       id="join"
       label="Join us"
       title="Join the team that operates real products."
-      description="모집은 학기별로 진행됩니다. 아직 준비 중이라면, 지금은 PNUops가 어떤 팀인지 먼저 살펴보세요."
+      description="Recruitment happens each semester. If you’re not ready yet, explore what kind of team PNUops is for now."
     >
       <div className="grid gap-8 md:grid-cols-[2fr,1.4fr]">
         <div className="space-y-4">
@@ -65,15 +65,15 @@ export default function JoinSection() {
               Backend · Frontend · Infra · Product Design · PM
             </p>
             <p className="text-text-secondary mt-3 text-xs">
-              트랙은 고정이 아니라, 실제 프로젝트에서 맡게 될 책임과 역할을
-              의미합니다.
+              Tracks are not rigid labels; they describe the responsibilities
+              you’ll take on in real projects.
             </p>
           </div>
 
           <div className="text-text-secondary mt-6 space-y-3 text-xs">
             <p>
-              자세한 모집 일정과 과제 안내는 PNUops 공식 채널(예: 인스타그램,
-              GitHub, Notion)을 통해 공지됩니다.
+              Detailed timelines and assignment info are announced via PNUops
+              official channels (Instagram, GitHub, Notion).
             </p>
             <motion.a
               href="/member"
@@ -81,7 +81,7 @@ export default function JoinSection() {
               whileTap={{ scale: 0.98 }}
               className="bg-brand-default hover:bg-brand-hover text-text-inverse inline-flex w-full items-center justify-center rounded-full px-4 py-2 text-sm font-semibold transition-colors"
             >
-              2026 모집 공고 알림 받기
+              Get notified about 2026 recruitment
             </motion.a>
           </div>
         </motion.div>

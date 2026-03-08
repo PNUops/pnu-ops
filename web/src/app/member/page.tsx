@@ -6,7 +6,7 @@ export default function MemberPage() {
           Member
         </h1>
         <p className="text-text-secondary text-base md:text-lg">
-          동아리 멤버/패밀리에 대한 소개가 들어갈 영역입니다.
+          This is where we will introduce PNUops members and alumni.
         </p>
       </section>
     </main>

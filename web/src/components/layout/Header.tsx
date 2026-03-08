@@ -13,11 +13,11 @@ const navItems = [
 const logos = [
   {
     src: "/logos/lg-pnuops-default.png",
-    alt: "PNUops 메인 로고",
+    alt: "PNUops main logo",
   },
   {
     src: "/logos/lg-pnuops-point.png",
-    alt: "PNUops 포인트 로고",
+    alt: "PNUops point logo",
   },
 ];
 

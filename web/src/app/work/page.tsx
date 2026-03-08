@@ -6,7 +6,8 @@ export default function WorkPage() {
           Opus
         </h1>
         <p className="text-text-secondary text-base md:text-lg">
-          활동/프로젝트(OPUS)에 대한 콘텐츠가 들어갈 영역입니다.
+          This is where stories and case studies about our activities and OPUS
+          projects will live.
         </p>
       </section>
     </main>

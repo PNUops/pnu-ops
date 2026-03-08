@@ -8,7 +8,7 @@ export default function AboutPage() {
           About
         </h1>
         <p className="text-text-secondary text-base md:text-lg">
-          동아리의 미션, 활동 방식, 운영 철학을 소개합니다.
+          Learn about our mission, how we work, and how we run the club.
         </p>
       </section>
       <AboutIntro />

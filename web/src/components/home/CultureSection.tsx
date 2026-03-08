@@ -6,19 +6,19 @@ import SectionLayout from "@/components/common/SectionLayout";
 const principles = [
   {
     title: "Ship to real users",
-    body: "실제 사용자를 상정하지 않은 프로젝트는 하지 않습니다.",
+    body: "We don't work on projects that don't assume real users.",
   },
   {
     title: "Operate what you build",
-    body: "만든 사람이 운영까지 책임지는 문화를 지향합니다.",
+    body: "We aim for a culture where builders also operate what they ship.",
   },
   {
     title: "No lone heroes",
-    body: "개인 플레이보다 작은 팀 단위 협업을 중요하게 생각합니다.",
+    body: "We value small-team collaboration over individual heroics.",
   },
   {
     title: "Learn in public",
-    body: "배운 것은 문서와 세미나로 공유하며 함께 성장합니다.",
+    body: "We share what we learn through docs and talks so everyone grows.",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function CultureSection() {
       id="culture"
       label="Club culture"
       title="We work like a small product team."
-      description="PNUops는 동아리이지만, 실제 프로덕트 팀에 가깝게 일합니다."
+      description="PNUops is a student club, but we work like a real product team."
     >
       <div className="grid gap-4 md:grid-cols-2">
         {principles.map((p) => (
