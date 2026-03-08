@@ -1,8 +1,7 @@
 @import "tailwindcss";
 
-/* Primitive palette from Figma */
+/* 1) Primitive tokens */
 :root {
-  /* brand */
   --primitive-brand-50: #e6f0f8;
   --primitive-brand-100: #b3d1ea;
   --primitive-brand-200: #80b3dc;
@@ -14,7 +13,6 @@
   --primitive-brand-800: #003867;
   --primitive-brand-900: #002c51;
 
-  /* neutral */
   --primitive-neutral-0: #ffffff;
   --primitive-neutral-50: #f7f9fb;
   --primitive-neutral-100: #eef2f6;
@@ -25,81 +23,134 @@
   --primitive-neutral-600: #4b5563;
   --primitive-neutral-700: #374151;
   --primitive-neutral-800: #1f2937;
-  --primitive-neutral-900: #00120b;
+  --primitive-neutral-900: #111827;
 
-  /* status */
   --primitive-green-500: #31e981;
   --primitive-orange-500: #e4572e;
   --primitive-blue-400: #6daedb;
 }
 
-/* Tailwind v4 theme tokens */
+/* 2) Semantic tokens: light */
+:root {
+  --bg-default: var(--primitive-neutral-0);
+  --bg-subtle: var(--primitive-neutral-50);
+  --bg-elevated: var(--primitive-neutral-0);
+  --bg-brand-subtle: var(--primitive-brand-50);
+
+  --text-primary: var(--primitive-neutral-900);
+  --text-secondary: var(--primitive-neutral-600);
+  --text-tertiary: var(--primitive-neutral-400);
+  --text-inverse: var(--primitive-neutral-0);
+  --text-brand: var(--primitive-brand-500);
+
+  --border-default: var(--primitive-neutral-200);
+  --border-subtle: var(--primitive-neutral-100);
+  --border-strong: var(--primitive-neutral-400);
+  --border-focus: var(--primitive-brand-500);
+
+  --fill-brand: var(--primitive-brand-500);
+  --fill-brand-hover: var(--primitive-brand-600);
+  --fill-brand-active: var(--primitive-brand-700);
+
+  --success-bg: color-mix(in srgb, var(--primitive-green-500) 14%, white);
+  --success-text: var(--primitive-green-500);
+  --success-border: color-mix(in srgb, var(--primitive-green-500) 32%, white);
+
+  --error-bg: color-mix(in srgb, var(--primitive-orange-500) 14%, white);
+  --error-text: var(--primitive-orange-500);
+  --error-border: color-mix(in srgb, var(--primitive-orange-500) 32%, white);
+
+  --info-bg: color-mix(in srgb, var(--primitive-blue-400) 16%, white);
+  --info-text: var(--primitive-blue-400);
+  --info-border: color-mix(in srgb, var(--primitive-blue-400) 32%, white);
+}
+
+/* 3) Semantic tokens: dark */
+html.dark {
+  --bg-default: var(--primitive-neutral-900);
+  --bg-subtle: var(--primitive-neutral-800);
+  --bg-elevated: var(--primitive-neutral-800);
+  --bg-brand-subtle: color-mix(in srgb, var(--primitive-brand-500) 18%, black);
+
+  --text-primary: var(--primitive-neutral-0);
+  --text-secondary: var(--primitive-neutral-300);
+  --text-tertiary: var(--primitive-neutral-500);
+  --text-inverse: var(--primitive-neutral-900);
+  --text-brand: var(--primitive-brand-200);
+
+  --border-default: var(--primitive-neutral-700);
+  --border-subtle: var(--primitive-neutral-800);
+  --border-strong: var(--primitive-neutral-500);
+  --border-focus: var(--primitive-brand-400);
+}
+
+/* 4) Tailwind theme bridge */
 @theme inline {
-  /* base text / background (semantic) */
-  --color-bg-default: var(--primitive-neutral-0);
-  --color-bg-subtle: var(--primitive-neutral-50);
-  --color-bg-elevated: var(--primitive-neutral-0);
-  --color-bg-brand: var(--primitive-brand-50);
+  --color-bg-default: var(--bg-default);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-brand: var(--bg-brand-subtle);
 
-  --color-text-primary: var(--primitive-neutral-900);
-  --color-text-secondary: var(--primitive-neutral-600);
-  --color-text-tertiary: var(--primitive-neutral-400);
-  --color-text-inverse: var(--primitive-neutral-0);
-  --color-text-brand: var(--primitive-brand-500);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-inverse: var(--text-inverse);
+  --color-text-brand: var(--text-brand);
 
-  --color-border-default: var(--primitive-neutral-200);
-  --color-border-subtle: var(--primitive-neutral-100);
-  --color-border-strong: var(--primitive-neutral-400);
-  --color-border-focus: var(--primitive-brand-500);
+  --color-border-default: var(--border-default);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  --color-border-focus: var(--border-focus);
 
-  --color-brand-default: var(--primitive-brand-500);
-  --color-brand-hover: var(--primitive-brand-600);
-  --color-brand-active: var(--primitive-brand-700);
-  --color-brand-subtle: var(--primitive-brand-50);
+  --color-fill-brand: var(--fill-brand);
+  --color-fill-brand-hover: var(--fill-brand-hover);
+  --color-fill-brand-active: var(--fill-brand-active);
 
-  --color-status-success: var(--primitive-green-500);
-  --color-status-error: var(--primitive-orange-500);
-  --color-status-info: var(--primitive-blue-400);
+  --color-success-bg: var(--success-bg);
+  --color-success-text: var(--success-text);
+  --color-success-border: var(--success-border);
 
-  /* keep backwards-compatible tokens for template classes */
-  --color-background: var(--color-bg-default);
-  --color-foreground: var(--color-text-primary);
+  --color-error-bg: var(--error-bg);
+  --color-error-text: var(--error-text);
+  --color-error-border: var(--error-border);
 
-  /* fonts from next/font (layout.tsx) */
-  --font-sans: var(--font-sans);
-  --font-display: var(--font-display);
+  --color-info-bg: var(--info-bg);
+  --color-info-text: var(--info-text);
+  --color-info-border: var(--info-border);
+
+  --color-background: var(--bg-default);
+  --color-foreground: var(--text-primary);
+
+  --font-sans: var(--app-font-sans);
+  --font-display: var(--app-font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* simple dark-mode mapping using same primitives */
-    --color-bg-default: var(--primitive-neutral-900);
-    --color-bg-subtle: var(--primitive-neutral-800);
-    --color-bg-elevated: var(--primitive-neutral-800);
-
-    --color-text-primary: var(--primitive-neutral-0);
-    --color-text-secondary: var(--primitive-neutral-300);
-    --color-text-tertiary: var(--primitive-neutral-500);
-  }
-}
-
+html,
 body {
-  background: var(--color-bg-default);
-  color: var(--color-text-primary);
+  background: var(--bg-default);
+  color: var(--text-primary);
   font-family:
-    var(--font-sans),
+    var(--app-font-kr),
+    var(--app-font-sans),
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 h1,
 h2,
 h3 {
   font-family:
-    var(--font-display),
+    var(--app-font-display),
     system-ui,
     -apple-system,
     BlinkMacSystemFont,

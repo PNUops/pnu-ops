@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import { MuseoModerno, Work_Sans } from "next/font/google";
+import { MuseoModerno, Noto_Sans_KR, Work_Sans } from "next/font/google";
+import AppShell from "@/components/layout/AppShell";
 import "./globals.css";
 
 const workSans = Work_Sans({
-  variable: "--font-sans",
+  variable: "--app-font-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
 
 const museoModerno = MuseoModerno({
-  variable: "--font-display",
+  variable: "--app-font-display",
   subsets: ["latin"],
   weight: ["500", "600", "700"],
+});
+
+const notoSansKr = Noto_Sans_KR({
+  variable: "--app-font-kr",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -27,9 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${workSans.variable} ${museoModerno.variable} antialiased`}
+        className={`${workSans.variable} ${museoModerno.variable} ${notoSansKr.variable} antialiased`}
       >
-        {children}
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );
