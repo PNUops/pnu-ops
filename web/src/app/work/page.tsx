@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function WorkPage() {
+  const assetPrefix = process.env.NODE_ENV === "production" ? "/pnu-ops" : "";
+
   return (
     <main className="mt-20 space-y-12 md:mt-24 md:space-y-16 lg:space-y-20">
       {/* Hero */}
@@ -45,7 +47,7 @@ export default function WorkPage() {
         <div className="flex flex-1 items-center justify-center md:justify-end">
           <div className="border-border-subtle bg-bg-elevated/90 relative w-full max-w-md overflow-hidden rounded-3xl border shadow-[0_18px_40px_rgba(15,23,42,0.16)]">
             <Image
-              src="/work/opus-cover.webp"
+              src={`${assetPrefix}/work/opus-cover.webp`}
               alt="부산대학교 SW프로젝트관리시스템(OPUS) 메인 화면"
               width={960}
               height={540}
