@@ -136,7 +136,7 @@ export default function WorkPage() {
             <p className="text-text-secondary text-xs md:text-sm">
               OPUS는 부산대학교 내부 해커톤과 캡스톤 프로그램에 실제로 도입되어,
               공모전 공지부터 결과물 등록, 심사, 결과 공유까지의 전체 플로우를
-              담당했습니다. 현재까지 220명 이상이 계정을 생성해 프로젝트를
+              담당했습니다. 현재까지 400명 이상이 계정을 생성해 프로젝트를
               등록하거나 열람했습니다.
             </p>
             <p className="text-text-secondary text-xs md:text-sm">
@@ -150,7 +150,7 @@ export default function WorkPage() {
           <div className="border-border-subtle bg-bg-subtle/80 flex flex-col justify-between gap-3 rounded-2xl border p-5 text-xs backdrop-blur-sm">
             <div className="space-y-1">
               <p className="text-text-tertiary font-semibold">Key Metrics</p>
-              <p className="text-text-primary">· 220+ 등록 사용자</p>
+              <p className="text-text-primary">· 400+ 실 사용자</p>
               <p className="text-text-primary">
                 · 다수의 해커톤·캡스톤 프로그램 적용
               </p>
