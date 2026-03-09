@@ -14,20 +14,28 @@ export default function AppShell({ children }: AppShellProps) {
   const pathname = usePathname();
   const isHome = pathname === "/";
 
+  const assetPrefix =
+    process.env.NODE_ENV === "production" ? "/pnu-ops" : "";
+
+  const backgroundUrl = `${assetPrefix}/backgrounds/bg-home-hero.webp`;
+
   const wrapperClassName = isHome
-    ? "!bg-[url('/backgrounds/bg-home-hero.webp')] bg-cover relative min-h-screen overflow-hidden bg-bg-default text-text-primary"
+    ? "bg-cover relative min-h-screen overflow-hidden bg-bg-default text-text-primary"
     : "min-h-screen bg-bg-default text-text-primary";
 
   return (
     <ParallaxProvider>
-      <div className={wrapperClassName}>
+      <div
+        className={wrapperClassName}
+        style={isHome ? { backgroundImage: `url(${backgroundUrl})` } : undefined}
+      >
         {isHome && (
           <Parallax
             speed={-20}
             className="pointer-events-none absolute inset-0 -z-10"
           >
             <Image
-              src="/backgrounds/bg-home-hero.webp"
+              src={backgroundUrl}
               alt="PNUops background"
               fill
               priority
