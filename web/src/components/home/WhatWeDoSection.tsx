@@ -5,24 +5,24 @@ import SectionLayout from "@/components/common/SectionLayout";
 
 const items = [
   {
-    title: "Product Development",
-    body: "We design web services and ship them every semester.",
-    tags: ["Web", "App", "Product"],
+    title: "서비스 기획·개발",
+    body: "학기마다 실제로 배포되는 웹 서비스와 내부 시스템을 만들어요.",
+    tags: ["웹 서비스", "런칭", "운영"],
   },
   {
-    title: "Internal Tools & Ops",
-    body: "We build dashboards and tools to run the club itself.",
-    tags: ["Dashboards", "Automation"],
+    title: "동아리 운영 시스템",
+    body: "동아리 개발 운영을 자동화하는 도구를 만들어요.",
+    tags: ["대시보드", "자동화"],
   },
   {
-    title: "Campus Tech Services",
-    body: "We plan and operate services that are actually used on campus.",
-    tags: ["Campus", "Service", "System"],
+    title: "캠퍼스 IT 서비스",
+    body: "부산대 학생들이 실제로 사용하는 캠퍼스 서비스를 기획·운영해요.",
+    tags: ["캠퍼스", "서비스", "시스템"],
   },
   {
-    title: "Learning & Sharing",
-    body: "We grow together through studies, seminars, and code reviews.",
-    tags: ["Study", "Seminar", "Review"],
+    title: "함께 배움·나눔",
+    body: "스터디, 세미나, 코드 리뷰로 서로의 성장을 도와요.",
+    tags: ["스터디", "세미나", "리뷰"],
   },
 ];
 
@@ -42,7 +42,7 @@ export default function WhatWeDoSection() {
             whileHover={{ y: -4, scale: 1.01 }}
             transition={{ type: "spring", stiffness: 260, damping: 20 }}
           >
-            <h3 className="text-text-primary text-base font-semibold">
+            <h3 className="text-text-primary font-sans! text-base font-semibold">
               {item.title}
             </h3>
             <p className="text-text-secondary mt-2 text-sm">{item.body}</p>

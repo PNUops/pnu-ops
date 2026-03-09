@@ -158,6 +158,11 @@ h3 {
     sans-serif;
 }
 
+.wrap-break-word {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 @keyframes hero-cursor-blink {
   0%,
   50% {

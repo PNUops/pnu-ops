@@ -32,11 +32,11 @@ export default function TechSection() {
                 Infra Engineer
               </p>
               <h3 className="text-text-primary mt-1 text-lg font-semibold">
-                Reliable service operations
+                안정적인 서비스 운영
               </h3>
               <p className="text-text-secondary mt-1 text-sm">
-                Design and operate service infrastructure with containers,
-                CI/CD, and observability.
+                컨테이너, CI/CD, 모니터링으로 안정적인 서비스 인프라를
+                설계·운영합니다.
               </p>
             </div>
             <Image
@@ -46,7 +46,7 @@ export default function TechSection() {
             />
           </Parallax>
           <p className="text-text-tertiary text-xs">
-            Stack · Docker · GitHub Actions · Linux · Monitoring/Logging
+            Docker · GitHub Actions · Linux · Monitoring/Logging
           </p>
         </div>
 
@@ -61,11 +61,10 @@ export default function TechSection() {
                 Frontend Engineer
               </p>
               <h3 className="text-text-primary mt-1 text-lg font-semibold">
-                Focused on user experience
+                사용자 경험에 집중하는 UI
               </h3>
               <p className="text-text-secondary mt-1 text-sm">
-                Build real web experiences with React and modern state
-                management.
+                React와 현대적인 상태 관리 라이브러리로 실제 웹 경험을 만듭니다.
               </p>
             </div>
             <div className="relative flex h-55 w-55 items-center justify-center md:h-65 md:w-65 lg:h-80 lg:w-[320px]">
@@ -82,7 +81,7 @@ export default function TechSection() {
             </div>
           </Parallax>
           <p className="text-text-tertiary text-xs">
-            Stack · React · Zustand · TypeScript · Next.js
+            React · Zustand · TypeScript
           </p>
         </div>
 
@@ -97,11 +96,11 @@ export default function TechSection() {
                 Backend Engineer
               </p>
               <h3 className="text-text-primary mt-1 text-lg font-semibold">
-                Data and business logic
+                데이터와 비즈니스 로직
               </h3>
               <p className="text-text-secondary mt-1 text-sm">
-                Implement APIs, batch jobs, and internal systems with Java and
-                relational databases.
+                Java와 관계형 데이터베이스로 API, 배치 작업, 내부 시스템을
+                구현합니다.
               </p>
             </div>
             <div className="relative flex h-55 w-55 items-center justify-center md:h-65 md:w-65 lg:h-80 lg:w-[320px]">
@@ -118,7 +117,7 @@ export default function TechSection() {
             </div>
           </Parallax>
           <p className="text-text-tertiary text-xs">
-            Stack · Java · MySQL · Gradle · REST API
+            Java · MySQL · Gradle · REST API
           </p>
         </div>
 
@@ -130,14 +129,14 @@ export default function TechSection() {
           >
             <div>
               <p className="text-brand-default text-xs font-semibold tracking-[0.2em] uppercase">
-                Designer
+                Product Designer
               </p>
               <h3 className="text-text-primary mt-1 text-lg font-semibold">
-                Designing product experiences
+                서비스 경험을 설계하는 디자이너
               </h3>
               <p className="text-text-secondary mt-1 text-sm">
-                Collaborate with engineers using design systems and prototypes
-                to ship products.
+                디자인 시스템과 프로토타입으로 엔지니어와 함께 제품을
+                만들어갑니다.
               </p>
             </div>
             <Image
@@ -147,7 +146,7 @@ export default function TechSection() {
             />
           </Parallax>
           <p className="text-text-tertiary text-xs">
-            Stack · Design System · Figma · Prototyping
+            Design System · Figma · Prototyping
           </p>
         </div>
       </div>

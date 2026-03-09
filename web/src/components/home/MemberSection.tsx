@@ -7,22 +7,22 @@ const members = [
   {
     name: "Member A",
     role: "Backend · Infra",
-    focus: "Distributed systems, observability",
+    focus: "분산 시스템, 모니터링/관측",
   },
   {
     name: "Member B",
     role: "Frontend · Product",
-    focus: "UX, design systems",
+    focus: "UX, 디자인 시스템",
   },
   {
     name: "Member C",
     role: "Product Designer",
-    focus: "Interaction, product thinking",
+    focus: "인터랙션, 프로덕트 사고",
   },
   {
     name: "Member D",
     role: "PM · Ops",
-    focus: "Roadmap, execution",
+    focus: "로드맵, 실행",
   },
 ];
 
@@ -30,8 +30,8 @@ export default function MemberSection() {
   return (
     <SectionLayout
       id="members"
-      label="Members"
-      title="Builders who run the systems."
+      label="멤버"
+      title="시스템을 직접 돌리는 사람들"
       description="PNUops는 역할이 나뉘어 있지만, 모두가 제품과 유저에 책임을 집니다."
     >
       <div className="grid gap-4 md:grid-cols-4">
