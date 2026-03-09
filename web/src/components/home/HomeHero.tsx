@@ -33,8 +33,9 @@ export default function HomeHero() {
         >
           <div className="flex flex-col items-start gap-3 space-y-3">
             <h1 className="text-text-primary font-mono text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-              <span className="text-brand-default">$</span> <span>{typed}</span>
-              <span className="bg-brand-default ml-1 inline-block h-7 w-0.5 animate-pulse align-middle" />
+              <span className="text-brand-default">$</span>{" "}
+              <span className="text-text-primary">{typed}</span>
+              <span className="hero-cursor text-text-brand ml-1">|</span>
             </h1>
             <div className="border-border-subtle bg-bg-elevated/80 text-text-secondary inline-flex shrink-0 items-center rounded-full border px-3 py-1 text-[11px] font-medium tracking-[0.18em] text-nowrap uppercase backdrop-blur">
               <span>

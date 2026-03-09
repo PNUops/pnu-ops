@@ -157,3 +157,18 @@ h3 {
     "Segoe UI",
     sans-serif;
 }
+
+@keyframes hero-cursor-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.hero-cursor {
+  animation: hero-cursor-blink 1s steps(1, end) infinite;
+}

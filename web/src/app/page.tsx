@@ -27,13 +27,13 @@ export default function Home() {
         <CultureSection />
       </Parallax>
 
-      <Parallax speed={-1}>
+      {/* <Parallax speed={-1}>
         <MemberSection />
       </Parallax>
 
       <Parallax speed={0}>
         <JoinSection />
-      </Parallax>
+      </Parallax> */}
     </main>
   );
 }
