@@ -10,13 +10,15 @@ const navItems = [
   // { href: "/member", label: "MEMBERS" },
 ];
 
+const assetPrefix = process.env.NODE_ENV === "production" ? "/pnu-ops" : "";
+
 const logos = [
   {
-    src: "/logos/lg-pnuops-default.png",
+    src: `${assetPrefix}/logos/lg-pnuops-default.png`,
     alt: "PNUops main logo",
   },
   {
-    src: "/logos/lg-pnuops-point.png",
+    src: `${assetPrefix}/logos/lg-pnuops-point.png`,
     alt: "PNUops point logo",
   },
 ];
